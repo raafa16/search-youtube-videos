@@ -5,7 +5,9 @@ const VideoList = ({ videos, onVideoSelect }) => {
   const renderedList = videos.map(video => {
     return (
       <VideoItem
-        key={video.id.videoId || video.id.channelId} // channels show up in youtube search api for some terms
+        key={
+          video.id["videoId"] || video.id["channelId"] || video.id["playlistId"]
+        } // channels and playlists show up in youtube search api for some terms
         onVideoSelect={onVideoSelect}
         video={video}
       />

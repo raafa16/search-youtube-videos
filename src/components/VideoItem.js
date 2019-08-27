@@ -2,7 +2,6 @@ import "./VideoItem.css";
 import React from "react";
 
 const VideoItem = ({ video, onVideoSelect }) => {
-  console.log(video);
   return (
     <div onClick={() => onVideoSelect(video)} className="video-item item">
       <img
